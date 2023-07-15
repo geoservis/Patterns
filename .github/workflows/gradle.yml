@@ -25,7 +25,7 @@ jobs:
         run: ava -jar ./artifacts/app-card-delivery.jar &
               chmod +x gradlew
       - name: Build with Gradle
-        run: ./gradlew test --info
+        run: ./gradlew test --info -Dselenide.headless=true
 
 # Команда `chmod +x gradlew` делает файл gradlew исполняемым в linux. 
 # Команда `./gradlew test` собирает ваш проект и запускает тесты.
